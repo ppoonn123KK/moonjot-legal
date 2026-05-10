@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー | MoonNote</title>
+<style>
+  :root {
+    --bg: #0e1226;
+    --surface: #161b35;
+    --text: #e8eaf6;
+    --muted: #9aa0c8;
+    --accent: #b9a7ff;
+    --border: rgba(185, 167, 255, 0.18);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, #0a0d1f 0%, #141936 100%);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 72px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin: 0 0 8px;
+    letter-spacing: 0.02em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin: 40px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  p, ul, ol {
+    color: var(--text);
+    font-size: 0.98rem;
+  }
+  ul, ol {
+    padding-left: 1.4em;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .lead {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+  .footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>プライバシーポリシー</h1>
+    <p class="meta">最終更新日: 2026年5月10日</p>
+
+    <div class="lead">
+      <p>本ポリシーは、ppoonn（以下「当方」）が提供するモバイルアプリケーション「MoonNote（ムーンノート）」（以下「本アプリ」）における、ユーザーの情報の取り扱いについて定めるものです。</p>
+    </div>
+
+    <h2>1. 取得する情報</h2>
+    <p>本アプリは、以下の情報を必要に応じて取得します。</p>
+    <ul>
+      <li><strong>位置情報</strong>：現在地の月の出入り時刻と天気を取得するために使用します。OS の位置情報許可がある場合のみ取得し、許可されていない場合や手動で都市を選択している場合は、ユーザーが選んだ都市の座標を使用します。</li>
+      <li><strong>日記本文・気分タグ・月齢・天気情報</strong>：ユーザーが入力した日記本文、選択した気分タグ、その日時点の月齢・月相・天気情報。これらは原則として端末内のローカルストレージにのみ保存されます。</li>
+      <li><strong>アプリの設定情報</strong>：通知のオン／オフ、リマインダー時刻、表示設定、選択言語など。端末内に保存されます。</li>
+    </ul>
+
+    <h2>2. 第三者サービスへの送信</h2>
+    <p>本アプリは、以下の機能を提供するために、必要最小限の情報を外部サービスに送信します。</p>
+    <ul>
+      <li><strong>OpenWeatherMap（天気情報の取得）</strong>：緯度経度を OpenWeatherMap API に送信し、現在地の天気情報を取得します。日記本文や個人を特定する情報は送信しません。</li>
+      <li><strong>Google Gemini API（「今夜の言葉」生成）</strong>：ユーザーが入力した日記本文、気分タグ、月齢・月相、天気情報を Google の Gemini API に送信し、AI が生成する短い言葉を取得します。送信内容にはユーザーを直接特定する情報（氏名・メールアドレス・端末識別子等）は含まれません。Google による Gemini API の取り扱いについては、<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 追加利用規約</a>および <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>をご確認ください。</li>
+    </ul>
+    <p>これらの送信は、当該機能を利用するときにのみ行われます。送信されたデータは当方のサーバーには保存されません。</p>
+
+    <h2>3. 端末内に保存される情報</h2>
+    <p>本アプリは原則として、ユーザーのデータを端末外のサーバーに保存しません。日記本文・気分タグ・設定情報は、すべて端末内のローカルストレージ（Hive / SharedPreferences）に保存されます。</p>
+    <p>端末をバックアップ（iCloud バックアップ・Google ドライブのバックアップ等）した場合、OS のバックアップ機能に従ってクラウドにバックアップされる場合があります。これらは OS 提供元（Apple / Google）が管理するものであり、当方はアクセスできません。</p>
+
+    <h2>4. 通知</h2>
+    <p>本アプリの通知（日記リマインダー、観月通知等）は、すべて端末上で動作するローカル通知です。プッシュ通知サーバーは利用しておらず、当方が通知の内容や送信先を取得することはありません。</p>
+
+    <h2>5. アナリティクス・広告</h2>
+    <p>本アプリは、ユーザーの行動を追跡するアナリティクス SDK や広告 SDK を組み込んでいません。クラッシュレポートや使用状況の解析のための SDK も使用していません。</p>
+
+    <h2>6. 課金情報</h2>
+    <p>プレミアム機能の購入は、Apple App Store または Google Play ストアの決済システムを通じて行われます。クレジットカード番号などの決済情報は Apple / Google が管理し、当方が取得することはありません。購入の有効性確認には、ストアが発行するレシート情報のみを利用します。</p>
+
+    <h2>7. 子どもの利用</h2>
+    <p>本アプリは全年齢を対象としていますが、13 歳未満のユーザーから個人を特定できる情報を意図的に収集することはありません。</p>
+
+    <h2>8. ユーザーの権利</h2>
+    <p>ユーザーは以下の操作をいつでも行うことができます。</p>
+    <ul>
+      <li>設定画面から、日記データをエクスポート／インポートする</li>
+      <li>設定画面の「全データを削除」から、端末内のすべての日記・設定・キャッシュを完全に削除する</li>
+      <li>OS の設定から、位置情報・通知の権限を取り消す</li>
+    </ul>
+
+    <h2>9. ポリシーの変更</h2>
+    <p>本ポリシーの内容は、必要に応じて変更されることがあります。重要な変更がある場合、本アプリまたはストア掲載情報を通じてお知らせします。本ポリシーの変更は、本ページに掲載した時点で効力を生じるものとします。</p>
+
+    <h2>10. お問い合わせ</h2>
+    <p>本ポリシーに関するお問い合わせは、以下のフォームよりご連絡ください。</p>
+    <p><a href="https://forms.gle/Tsn2LKJQZXZ1ENMq6" target="_blank" rel="noopener">お問い合わせフォーム</a></p>
+
+    <div class="footer">
+      © MoonNote / ppoonn
+    </div>
+  </div>
+</body>
+</html>
