@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>プライバシーポリシー | Moonjot</title>
+<title>Privacy Policy | Moonjot</title>
 <style>
   :root {
     --bg: #0e1226;
@@ -68,6 +68,26 @@
     padding: 18px 20px;
     margin-bottom: 28px;
   }
+  .lang-nav {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .lang-nav a {
+    color: var(--muted);
+  }
+  .lang-nav a.active {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .divider {
+    margin: 64px 0 0;
+    padding-top: 32px;
+    border-top: 2px solid var(--border);
+  }
   .footer {
     margin-top: 56px;
     padding-top: 20px;
@@ -79,59 +99,122 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>プライバシーポリシー</h1>
-    <p class="meta">最終更新日: 2026年5月10日</p>
-
-    <div class="lead">
-      <p>本ポリシーは、PPOONN STUDIO（以下「当方」）が提供するモバイルアプリケーション「Moonjot（ムーンジョット）」（以下「本アプリ」）における、ユーザーの情報の取り扱いについて定めるものです。</p>
+    <div class="lang-nav">
+      <a href="#en" class="active">English</a>
+      <a href="#ja">日本語</a>
     </div>
 
-    <h2>1. 取得する情報</h2>
-    <p>本アプリは、以下の情報を必要に応じて取得します。</p>
-    <ul>
-      <li><strong>位置情報</strong>：現在地の月の出入り時刻と天気を取得するために使用します。OS の位置情報許可がある場合のみ取得し、許可されていない場合や手動で都市を選択している場合は、ユーザーが選んだ都市の座標を使用します。</li>
-      <li><strong>日記本文・気分タグ・月齢・天気情報</strong>：ユーザーが入力した日記本文、選択した気分タグ、その日時点の月齢・月相・天気情報。これらは原則として端末内のローカルストレージにのみ保存されます。</li>
-      <li><strong>アプリの設定情報</strong>：通知のオン／オフ、リマインダー時刻、表示設定、選択言語など。端末内に保存されます。</li>
-    </ul>
+    <section id="en">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: May 10, 2026</p>
 
-    <h2>2. 第三者サービスへの送信</h2>
-    <p>本アプリは、以下の機能を提供するために、必要最小限の情報を外部サービスに送信します。</p>
-    <ul>
-      <li><strong>OpenWeatherMap（天気情報の取得）</strong>：緯度経度を OpenWeatherMap API に送信し、現在地の天気情報を取得します。日記本文や個人を特定する情報は送信しません。</li>
-      <li><strong>Google Gemini API（「今夜の言葉」生成）</strong>：ユーザーが入力した日記本文、気分タグ、月齢・月相、天気情報を Google の Gemini API に送信し、AI が生成する短い言葉を取得します。送信内容にはユーザーを直接特定する情報（氏名・メールアドレス・端末識別子等）は含まれません。Google による Gemini API の取り扱いについては、<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 追加利用規約</a>および <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>をご確認ください。</li>
-    </ul>
-    <p>これらの送信は、当該機能を利用するときにのみ行われます。送信されたデータは当方のサーバーには保存されません。</p>
+      <div class="lead">
+        <p>This Privacy Policy describes how PPOONN STUDIO ("we" or "us") handles user information in the mobile application "Moonjot" ("the App").</p>
+      </div>
 
-    <h2>3. 端末内に保存される情報</h2>
-    <p>本アプリは原則として、ユーザーのデータを端末外のサーバーに保存しません。日記本文・気分タグ・設定情報は、すべて端末内のローカルストレージ（Hive / SharedPreferences）に保存されます。</p>
-    <p>端末をバックアップ（iCloud バックアップ・Google ドライブのバックアップ等）した場合、OS のバックアップ機能に従ってクラウドにバックアップされる場合があります。これらは OS 提供元（Apple / Google）が管理するものであり、当方はアクセスできません。</p>
+      <h2>1. Information We Collect</h2>
+      <p>The App collects the following information only as needed:</p>
+      <ul>
+        <li><strong>Location</strong>: Used to retrieve moonrise/moonset times and weather for your current location. Collected only when you grant the OS-level location permission. If permission is not granted or you have manually selected a city, the App uses the coordinates of the city you chose.</li>
+        <li><strong>Diary text, mood tags, moon age, weather information</strong>: Diary text and mood tags you enter, plus the moon age, moon phase, and weather information for that day. These are stored only in local storage on your device by default.</li>
+        <li><strong>App settings</strong>: Notification toggles, reminder times, display preferences, language. Stored locally on your device.</li>
+      </ul>
 
-    <h2>4. 通知</h2>
-    <p>本アプリの通知（日記リマインダー、観月通知等）は、すべて端末上で動作するローカル通知です。プッシュ通知サーバーは利用しておらず、当方が通知の内容や送信先を取得することはありません。</p>
+      <h2>2. Data Sent to Third-Party Services</h2>
+      <p>The App sends the minimum information necessary to the following services to provide its features:</p>
+      <ul>
+        <li><strong>OpenWeatherMap (weather data)</strong>: Latitude and longitude are sent to the OpenWeatherMap API to retrieve current weather. Diary text and personally identifying information are not sent.</li>
+        <li><strong>Google Gemini API ("Tonight's Words" generation)</strong>: When you use the AI feature, the diary text, mood tag, moon age, moon phase, and weather information you have entered are sent to Google's Gemini API to generate a short message. The data sent does not include directly identifying information such as your name, email address, or device identifiers. For Google's handling of Gemini API data, please see the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Additional Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+      </ul>
+      <p>These transmissions occur only when the corresponding feature is in use. The data sent is not stored on our servers.</p>
 
-    <h2>5. アナリティクス・広告</h2>
-    <p>本アプリは、ユーザーの行動を追跡するアナリティクス SDK や広告 SDK を組み込んでいません。クラッシュレポートや使用状況の解析のための SDK も使用していません。</p>
+      <h2>3. Information Stored on Your Device</h2>
+      <p>The App does not store user data on any server outside your device by default. Diary text, mood tags, and settings are all stored in local storage on your device (Hive / SharedPreferences).</p>
+      <p>If you back up your device (iCloud Backup, Google Drive Backup, etc.), the data may be backed up to the cloud per your OS backup settings. Such backups are managed by the OS provider (Apple / Google) and we do not have access to them.</p>
 
-    <h2>6. 課金情報</h2>
-    <p>プレミアム機能の購入は、Apple App Store または Google Play ストアの決済システムを通じて行われます。クレジットカード番号などの決済情報は Apple / Google が管理し、当方が取得することはありません。購入の有効性確認には、ストアが発行するレシート情報のみを利用します。</p>
+      <h2>4. Notifications</h2>
+      <p>All notifications from the App (diary reminder, moon-viewing notification, etc.) are local notifications running on your device. We do not use any push notification servers and we cannot read the content or destination of these notifications.</p>
 
-    <h2>7. 子どもの利用</h2>
-    <p>本アプリは全年齢を対象としていますが、13 歳未満のユーザーから個人を特定できる情報を意図的に収集することはありません。</p>
+      <h2>5. Analytics and Advertising</h2>
+      <p>The App does not include any analytics SDK or advertising SDK that tracks user behavior. We also do not use any SDK for crash reporting or usage analytics.</p>
 
-    <h2>8. ユーザーの権利</h2>
-    <p>ユーザーは以下の操作をいつでも行うことができます。</p>
-    <ul>
-      <li>設定画面から、日記データをエクスポート／インポートする</li>
-      <li>設定画面の「全データを削除」から、端末内のすべての日記・設定・キャッシュを完全に削除する</li>
-      <li>OS の設定から、位置情報・通知の権限を取り消す</li>
-    </ul>
+      <h2>6. Payment Information</h2>
+      <p>Premium purchases are processed through the Apple App Store or Google Play payment system. Payment details such as credit card numbers are managed by Apple / Google and we do not have access to them. We use only the receipt information issued by the store to confirm the validity of a purchase.</p>
 
-    <h2>9. ポリシーの変更</h2>
-    <p>本ポリシーの内容は、必要に応じて変更されることがあります。重要な変更がある場合、本アプリまたはストア掲載情報を通じてお知らせします。本ポリシーの変更は、本ページに掲載した時点で効力を生じるものとします。</p>
+      <h2>7. Children's Use</h2>
+      <p>The App is intended for all ages, but we do not intentionally collect personally identifiable information from users under the age of 13.</p>
 
-    <h2>10. お問い合わせ</h2>
-    <p>本ポリシーに関するお問い合わせは、以下のフォームよりご連絡ください。</p>
-    <p><a href="https://forms.gle/Tsn2LKJQZXZ1ENMq6" target="_blank" rel="noopener">お問い合わせフォーム</a></p>
+      <h2>8. Your Rights</h2>
+      <p>You can perform the following actions at any time:</p>
+      <ul>
+        <li>Export or import your diary data from the Settings screen</li>
+        <li>Delete all diary data, settings, and caches stored on the device using "Delete all data" in Settings</li>
+        <li>Revoke location and notification permissions in your device's OS settings</li>
+      </ul>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. For material changes, we will notify you through the App or the App Store listing. Changes take effect when posted on this page.</p>
+
+      <h2>10. Contact</h2>
+      <p>For inquiries about this Privacy Policy, please use the form below:</p>
+      <p><a href="https://forms.gle/Tsn2LKJQZXZ1ENMq6" target="_blank" rel="noopener">Contact form</a></p>
+    </section>
+
+    <section id="ja" class="divider">
+      <h1>プライバシーポリシー</h1>
+      <p class="meta">最終更新日: 2026年5月10日</p>
+
+      <div class="lead">
+        <p>本ポリシーは、PPOONN STUDIO（以下「当方」）が提供するモバイルアプリケーション「Moonjot（ムーンジョット）」（以下「本アプリ」）における、ユーザーの情報の取り扱いについて定めるものです。</p>
+      </div>
+
+      <h2>1. 取得する情報</h2>
+      <p>本アプリは、以下の情報を必要に応じて取得します。</p>
+      <ul>
+        <li><strong>位置情報</strong>：現在地の月の出入り時刻と天気を取得するために使用します。OS の位置情報許可がある場合のみ取得し、許可されていない場合や手動で都市を選択している場合は、ユーザーが選んだ都市の座標を使用します。</li>
+        <li><strong>日記本文・気分タグ・月齢・天気情報</strong>：ユーザーが入力した日記本文、選択した気分タグ、その日時点の月齢・月相・天気情報。これらは原則として端末内のローカルストレージにのみ保存されます。</li>
+        <li><strong>アプリの設定情報</strong>：通知のオン／オフ、リマインダー時刻、表示設定、選択言語など。端末内に保存されます。</li>
+      </ul>
+
+      <h2>2. 第三者サービスへの送信</h2>
+      <p>本アプリは、以下の機能を提供するために、必要最小限の情報を外部サービスに送信します。</p>
+      <ul>
+        <li><strong>OpenWeatherMap（天気情報の取得）</strong>：緯度経度を OpenWeatherMap API に送信し、現在地の天気情報を取得します。日記本文や個人を特定する情報は送信しません。</li>
+        <li><strong>Google Gemini API（「今夜の言葉」生成）</strong>：ユーザーが入力した日記本文、気分タグ、月齢・月相、天気情報を Google の Gemini API に送信し、AI が生成する短い言葉を取得します。送信内容にはユーザーを直接特定する情報（氏名・メールアドレス・端末識別子等）は含まれません。Google による Gemini API の取り扱いについては、<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 追加利用規約</a>および <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>をご確認ください。</li>
+      </ul>
+      <p>これらの送信は、当該機能を利用するときにのみ行われます。送信されたデータは当方のサーバーには保存されません。</p>
+
+      <h2>3. 端末内に保存される情報</h2>
+      <p>本アプリは原則として、ユーザーのデータを端末外のサーバーに保存しません。日記本文・気分タグ・設定情報は、すべて端末内のローカルストレージ（Hive / SharedPreferences）に保存されます。</p>
+      <p>端末をバックアップ（iCloud バックアップ・Google ドライブのバックアップ等）した場合、OS のバックアップ機能に従ってクラウドにバックアップされる場合があります。これらは OS 提供元（Apple / Google）が管理するものであり、当方はアクセスできません。</p>
+
+      <h2>4. 通知</h2>
+      <p>本アプリの通知（日記リマインダー、観月通知等）は、すべて端末上で動作するローカル通知です。プッシュ通知サーバーは利用しておらず、当方が通知の内容や送信先を取得することはありません。</p>
+
+      <h2>5. アナリティクス・広告</h2>
+      <p>本アプリは、ユーザーの行動を追跡するアナリティクス SDK や広告 SDK を組み込んでいません。クラッシュレポートや使用状況の解析のための SDK も使用していません。</p>
+
+      <h2>6. 課金情報</h2>
+      <p>プレミアム機能の購入は、Apple App Store または Google Play ストアの決済システムを通じて行われます。クレジットカード番号などの決済情報は Apple / Google が管理し、当方が取得することはありません。購入の有効性確認には、ストアが発行するレシート情報のみを利用します。</p>
+
+      <h2>7. 子どもの利用</h2>
+      <p>本アプリは全年齢を対象としていますが、13 歳未満のユーザーから個人を特定できる情報を意図的に収集することはありません。</p>
+
+      <h2>8. ユーザーの権利</h2>
+      <p>ユーザーは以下の操作をいつでも行うことができます。</p>
+      <ul>
+        <li>設定画面から、日記データをエクスポート／インポートする</li>
+        <li>設定画面の「全データを削除」から、端末内のすべての日記・設定・キャッシュを完全に削除する</li>
+        <li>OS の設定から、位置情報・通知の権限を取り消す</li>
+      </ul>
+
+      <h2>9. ポリシーの変更</h2>
+      <p>本ポリシーの内容は、必要に応じて変更されることがあります。重要な変更がある場合、本アプリまたはストア掲載情報を通じてお知らせします。本ポリシーの変更は、本ページに掲載した時点で効力を生じるものとします。</p>
+
+      <h2>10. お問い合わせ</h2>
+      <p>本ポリシーに関するお問い合わせは、以下のフォームよりご連絡ください。</p>
+      <p><a href="https://forms.gle/Tsn2LKJQZXZ1ENMq6" target="_blank" rel="noopener">お問い合わせフォーム</a></p>
+    </section>
 
     <div class="footer">
       © Moonjot / PPOONN STUDIO

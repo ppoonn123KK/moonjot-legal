@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>利用規約 | Moonjot</title>
+<title>Terms of Use | Moonjot</title>
 <style>
   :root {
     --bg: #0e1226;
@@ -68,6 +68,26 @@
     padding: 18px 20px;
     margin-bottom: 28px;
   }
+  .lang-nav {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .lang-nav a {
+    color: var(--muted);
+  }
+  .lang-nav a.active {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .divider {
+    margin: 64px 0 0;
+    padding-top: 32px;
+    border-top: 2px solid var(--border);
+  }
   .footer {
     margin-top: 56px;
     padding-top: 20px;
@@ -79,70 +99,144 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>利用規約</h1>
-    <p class="meta">最終更新日: 2026年5月10日</p>
-
-    <div class="lead">
-      <p>本規約は、PPOONN STUDIO（以下「当方」）が提供するモバイルアプリケーション「Moonjot（ムーンジョット）」（以下「本アプリ」）の利用条件を定めるものです。本アプリをダウンロード・インストール・利用された時点で、本規約に同意したものとみなされます。</p>
+    <div class="lang-nav">
+      <a href="#en" class="active">English</a>
+      <a href="#ja">日本語</a>
     </div>
 
-    <h2>1. 本アプリの内容</h2>
-    <p>本アプリは、月の満ち欠け・天気と連動した一言日記を記録できるアプリケーションです。月齢に応じた AI による短い言葉の生成、過去日記の振り返り、リマインダー通知などの機能を提供します。</p>
+    <section id="en">
+      <h1>Terms of Use</h1>
+      <p class="meta">Last updated: May 10, 2026</p>
 
-    <h2>2. 利用環境</h2>
-    <p>本アプリの利用にあたり必要となる端末・通信環境（インターネット接続料金等）は、ユーザーの負担となります。本アプリの一部機能（天気取得、AI による言葉の生成）はインターネット接続を必要とします。</p>
+      <div class="lead">
+        <p>These Terms of Use ("Terms") set out the conditions under which PPOONN STUDIO ("we" or "us") provides the mobile application "Moonjot" ("the App"). By downloading, installing, or using the App, you are deemed to have agreed to these Terms.</p>
+      </div>
 
-    <h2>3. 課金・プレミアム機能</h2>
-    <ul>
-      <li>本アプリの一部機能は、プレミアム購入によって利用可能になります。</li>
-      <li>プレミアムは買い切り型であり、自動更新は行われません。</li>
-      <li>支払いは Apple App Store または Google Play ストアの決済システムを通じて行われます。</li>
-      <li>同じ Apple ID または Google アカウントを使用する場合、機種変更後もアプリ内の「購入を復元」から購入を引き継ぐことができます。</li>
-      <li>すでにダウンロードされたデジタルコンテンツの性質上、購入後の返金は原則として行いません。返金が必要な場合は、各ストアの返金ポリシーに従ってください。</li>
-    </ul>
+      <h2>1. About the App</h2>
+      <p>The App is a one-line journaling application that connects with the moon's phases and weather. It offers features such as AI-generated short messages tailored to the moon phase, looking back at past entries, and reminder notifications.</p>
 
-    <h2>4. 禁止事項</h2>
-    <p>ユーザーは、本アプリの利用にあたり、以下の行為をしてはなりません。</p>
-    <ul>
-      <li>法令または公序良俗に違反する行為</li>
-      <li>本アプリのリバースエンジニアリング、逆コンパイル、逆アセンブル等の解析行為</li>
-      <li>本アプリの機能を不正に複製、改変、再配布する行為</li>
-      <li>本アプリの提供を妨害する行為、過度な負荷をかける行為</li>
-      <li>他のユーザーまたは第三者の権利を侵害する行為</li>
-      <li>その他、当方が不適切と判断する行為</li>
-    </ul>
+      <h2>2. Use Environment</h2>
+      <p>You are responsible for the device and connectivity (including data charges) required to use the App. Some features (weather retrieval, AI-generated messages) require an internet connection.</p>
 
-    <h2>5. ユーザーが投稿する内容</h2>
-    <p>本アプリでユーザーが入力する日記本文等のデータは、原則としてユーザーの端末内に保存されます。AI による「今夜の言葉」生成機能を利用する際には、入力内容が一時的に Google Gemini API に送信されます。詳細は<a href="./privacy-policy.html">プライバシーポリシー</a>をご確認ください。</p>
-    <p>ユーザーは、自身が入力した内容について、自らの責任で管理するものとします。</p>
+      <h2>3. Purchases / Premium Features</h2>
+      <ul>
+        <li>Some features of the App become available through a Premium purchase.</li>
+        <li>Premium is a one-time purchase and does not auto-renew.</li>
+        <li>Payment is processed through the Apple App Store or Google Play payment system.</li>
+        <li>If you use the same Apple ID or Google account, you can carry your purchase to a new device by tapping "Restore Purchase" inside the App.</li>
+        <li>Due to the nature of digital content already downloaded, refunds after purchase are generally not provided. If a refund is necessary, please follow each store's refund policy.</li>
+      </ul>
 
-    <h2>6. AI 生成コンテンツについて</h2>
-    <p>本アプリの「今夜の言葉」機能は、Google が提供する Gemini API を利用して文章を生成します。AI が生成する文章は、内容の正確性・適切性を保証するものではありません。生成された文章は参考情報としてご利用いただき、医療・法律・金融等の専門的判断には用いないでください。</p>
+      <h2>4. Prohibited Conduct</h2>
+      <p>You must not:</p>
+      <ul>
+        <li>Violate any law or public order</li>
+        <li>Reverse engineer, decompile, or disassemble the App</li>
+        <li>Improperly copy, modify, or redistribute the App's features</li>
+        <li>Interfere with or impose undue load on the App's operation</li>
+        <li>Infringe the rights of other users or third parties</li>
+        <li>Engage in any other conduct we determine to be inappropriate</li>
+      </ul>
 
-    <h2>7. 知的財産権</h2>
-    <p>本アプリおよび本アプリに含まれるすべてのコンテンツ（プログラム、デザイン、テキスト、画像、ロゴ等）の著作権その他の知的財産権は、当方または正当な権利者に帰属します。</p>
-    <p>ユーザーが本アプリ内で作成した日記本文の著作権は、ユーザー本人に帰属します。</p>
+      <h2>5. User-Submitted Content</h2>
+      <p>Diary text and other data you input in the App is, in principle, stored on your device. When using the AI "Tonight's Words" feature, the input is temporarily sent to Google's Gemini API. See the <a href="./privacy-policy.html">Privacy Policy</a> for details.</p>
+      <p>You are responsible for managing the content you input.</p>
 
-    <h2>8. 免責事項</h2>
-    <ul>
-      <li>当方は、本アプリの内容について、その正確性・完全性・有用性について保証しません。</li>
-      <li>本アプリが提供する月齢・月の出入り時刻・天気情報は、参考情報としてのみご利用ください。航海・航空・天文観測等の正確性が要求される用途には使用しないでください。</li>
-      <li>当方は、本アプリの利用または利用不能から生じたいかなる損害（データの消失を含む）についても、責任を負わないものとします。</li>
-      <li>OS のアップデート、外部サービス（OpenWeatherMap、Google Gemini API 等）の仕様変更、その他の理由により、本アプリの一部機能が利用できなくなる場合があります。</li>
-    </ul>
+      <h2>6. AI-Generated Content</h2>
+      <p>The "Tonight's Words" feature generates text using Google's Gemini API. AI-generated text is not guaranteed to be accurate or appropriate. Please use generated text only as reference, and do not rely on it for medical, legal, financial, or other professional decisions.</p>
 
-    <h2>9. サービスの変更・終了</h2>
-    <p>当方は、ユーザーへの事前通知なく、本アプリの内容を変更または提供を終了することができるものとします。これによりユーザーに損害が生じた場合でも、当方は責任を負わないものとします。</p>
+      <h2>7. Intellectual Property</h2>
+      <p>All copyright and other intellectual property rights in the App and the content within it (programs, design, text, images, logos, etc.) belong to us or to lawful right holders.</p>
+      <p>The copyright in diary text you author within the App belongs to you.</p>
 
-    <h2>10. 規約の変更</h2>
-    <p>当方は、必要と判断した場合、ユーザーへの事前通知なく本規約を変更することができるものとします。変更後の規約は、本ページに掲載した時点で効力を生じるものとします。</p>
+      <h2>8. Disclaimer</h2>
+      <ul>
+        <li>We do not warrant the accuracy, completeness, or usefulness of the App's content.</li>
+        <li>Moon age, moon-rise/moon-set times, and weather information provided by the App are for reference only. Do not use them for purposes that require accuracy, such as navigation, aviation, or astronomical observation.</li>
+        <li>We are not liable for any damages arising from use or inability to use the App, including data loss.</li>
+        <li>Some features of the App may become unavailable due to OS updates, changes in external services (OpenWeatherMap, Google Gemini API, etc.), or other reasons.</li>
+      </ul>
 
-    <h2>11. 準拠法・管轄裁判所</h2>
-    <p>本規約は日本法に準拠して解釈されます。本アプリに関連して当方とユーザーとの間に紛争が生じた場合、当方の所在地を管轄する地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+      <h2>9. Service Changes / Termination</h2>
+      <p>We may change the content of the App or terminate the service without prior notice. We are not liable for any damage to users arising from such changes or termination.</p>
 
-    <h2>12. お問い合わせ</h2>
-    <p>本規約に関するお問い合わせは、以下のフォームよりご連絡ください。</p>
-    <p><a href="https://forms.gle/Tsn2LKJQZXZ1ENMq6" target="_blank" rel="noopener">お問い合わせフォーム</a></p>
+      <h2>10. Changes to These Terms</h2>
+      <p>We may amend these Terms without prior notice when we deem it necessary. The amended Terms take effect when posted on this page.</p>
+
+      <h2>11. Governing Law / Jurisdiction</h2>
+      <p>These Terms are interpreted under Japanese law. Any dispute between us and a user related to the App shall be subject to the exclusive jurisdiction of the district court having jurisdiction over our location, as the court of first instance.</p>
+
+      <h2>12. Contact</h2>
+      <p>For inquiries about these Terms, please use the form below:</p>
+      <p><a href="https://forms.gle/Tsn2LKJQZXZ1ENMq6" target="_blank" rel="noopener">Contact form</a></p>
+    </section>
+
+    <section id="ja" class="divider">
+      <h1>利用規約</h1>
+      <p class="meta">最終更新日: 2026年5月10日</p>
+
+      <div class="lead">
+        <p>本規約は、PPOONN STUDIO（以下「当方」）が提供するモバイルアプリケーション「Moonjot（ムーンジョット）」（以下「本アプリ」）の利用条件を定めるものです。本アプリをダウンロード・インストール・利用された時点で、本規約に同意したものとみなされます。</p>
+      </div>
+
+      <h2>1. 本アプリの内容</h2>
+      <p>本アプリは、月の満ち欠け・天気と連動した一言日記を記録できるアプリケーションです。月齢に応じた AI による短い言葉の生成、過去日記の振り返り、リマインダー通知などの機能を提供します。</p>
+
+      <h2>2. 利用環境</h2>
+      <p>本アプリの利用にあたり必要となる端末・通信環境（インターネット接続料金等）は、ユーザーの負担となります。本アプリの一部機能（天気取得、AI による言葉の生成）はインターネット接続を必要とします。</p>
+
+      <h2>3. 課金・プレミアム機能</h2>
+      <ul>
+        <li>本アプリの一部機能は、プレミアム購入によって利用可能になります。</li>
+        <li>プレミアムは買い切り型であり、自動更新は行われません。</li>
+        <li>支払いは Apple App Store または Google Play ストアの決済システムを通じて行われます。</li>
+        <li>同じ Apple ID または Google アカウントを使用する場合、機種変更後もアプリ内の「購入を復元」から購入を引き継ぐことができます。</li>
+        <li>すでにダウンロードされたデジタルコンテンツの性質上、購入後の返金は原則として行いません。返金が必要な場合は、各ストアの返金ポリシーに従ってください。</li>
+      </ul>
+
+      <h2>4. 禁止事項</h2>
+      <p>ユーザーは、本アプリの利用にあたり、以下の行為をしてはなりません。</p>
+      <ul>
+        <li>法令または公序良俗に違反する行為</li>
+        <li>本アプリのリバースエンジニアリング、逆コンパイル、逆アセンブル等の解析行為</li>
+        <li>本アプリの機能を不正に複製、改変、再配布する行為</li>
+        <li>本アプリの提供を妨害する行為、過度な負荷をかける行為</li>
+        <li>他のユーザーまたは第三者の権利を侵害する行為</li>
+        <li>その他、当方が不適切と判断する行為</li>
+      </ul>
+
+      <h2>5. ユーザーが投稿する内容</h2>
+      <p>本アプリでユーザーが入力する日記本文等のデータは、原則としてユーザーの端末内に保存されます。AI による「今夜の言葉」生成機能を利用する際には、入力内容が一時的に Google Gemini API に送信されます。詳細は<a href="./privacy-policy.html">プライバシーポリシー</a>をご確認ください。</p>
+      <p>ユーザーは、自身が入力した内容について、自らの責任で管理するものとします。</p>
+
+      <h2>6. AI 生成コンテンツについて</h2>
+      <p>本アプリの「今夜の言葉」機能は、Google が提供する Gemini API を利用して文章を生成します。AI が生成する文章は、内容の正確性・適切性を保証するものではありません。生成された文章は参考情報としてご利用いただき、医療・法律・金融等の専門的判断には用いないでください。</p>
+
+      <h2>7. 知的財産権</h2>
+      <p>本アプリおよび本アプリに含まれるすべてのコンテンツ（プログラム、デザイン、テキスト、画像、ロゴ等）の著作権その他の知的財産権は、当方または正当な権利者に帰属します。</p>
+      <p>ユーザーが本アプリ内で作成した日記本文の著作権は、ユーザー本人に帰属します。</p>
+
+      <h2>8. 免責事項</h2>
+      <ul>
+        <li>当方は、本アプリの内容について、その正確性・完全性・有用性について保証しません。</li>
+        <li>本アプリが提供する月齢・月の出入り時刻・天気情報は、参考情報としてのみご利用ください。航海・航空・天文観測等の正確性が要求される用途には使用しないでください。</li>
+        <li>当方は、本アプリの利用または利用不能から生じたいかなる損害（データの消失を含む）についても、責任を負わないものとします。</li>
+        <li>OS のアップデート、外部サービス（OpenWeatherMap、Google Gemini API 等）の仕様変更、その他の理由により、本アプリの一部機能が利用できなくなる場合があります。</li>
+      </ul>
+
+      <h2>9. サービスの変更・終了</h2>
+      <p>当方は、ユーザーへの事前通知なく、本アプリの内容を変更または提供を終了することができるものとします。これによりユーザーに損害が生じた場合でも、当方は責任を負わないものとします。</p>
+
+      <h2>10. 規約の変更</h2>
+      <p>当方は、必要と判断した場合、ユーザーへの事前通知なく本規約を変更することができるものとします。変更後の規約は、本ページに掲載した時点で効力を生じるものとします。</p>
+
+      <h2>11. 準拠法・管轄裁判所</h2>
+      <p>本規約は日本法に準拠して解釈されます。本アプリに関連して当方とユーザーとの間に紛争が生じた場合、当方の所在地を管轄する地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+      <h2>12. お問い合わせ</h2>
+      <p>本規約に関するお問い合わせは、以下のフォームよりご連絡ください。</p>
+      <p><a href="https://forms.gle/Tsn2LKJQZXZ1ENMq6" target="_blank" rel="noopener">お問い合わせフォーム</a></p>
+    </section>
 
     <div class="footer">
       © Moonjot / PPOONN STUDIO
