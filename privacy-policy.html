@@ -108,7 +108,7 @@
 
     <section id="en">
       <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: August 9, 2026</p>
+      <p class="meta">Last updated: September 11, 2026</p>
 
       <div class="lead">
         <p>This Privacy Policy describes how PPOONN STUDIO ("we" or "us") handles user information in the mobile application "Moonjot" ("the App").</p>
@@ -120,25 +120,28 @@
         <li><strong>Location</strong>: Used to retrieve moonrise/moonset times and weather for your current location. Collected only when you grant the OS-level location permission. If permission is not granted or you have manually selected a city, the App uses the coordinates of the city you chose.</li>
         <li><strong>Diary text, mood tags, moon age, weather information</strong>: Diary text and mood tags you enter, plus the moon age, moon phase, and weather information for that day. These are stored only in local storage on your device by default.</li>
         <li><strong>App settings</strong>: Notification toggles, reminder times, display preferences, language. Stored locally on your device.</li>
+        <li><strong>Anonymous Firebase identifier and AI request count</strong>: A randomly generated anonymous identifier and the number of AI requests made per day are used to prevent abuse and enforce usage limits. We do not collect your name, email address, or password for this purpose.</li>
       </ul>
 
       <h2>2. Data Sent to Third-Party Services</h2>
       <p>The App sends the minimum information necessary to the following services to provide its features:</p>
       <ul>
         <li><strong>OpenWeatherMap (weather data)</strong>: Latitude and longitude are sent to the OpenWeatherMap API to retrieve current weather. Diary text and personally identifying information are not sent.</li>
-        <li><strong>Google Gemini API ("Tonight's Words" generation)</strong>: When you use the AI feature, the diary text, mood tag, moon age, moon phase, and weather information you have entered are sent to Google's Gemini API to generate a short message. The data sent does not include directly identifying information such as your name, email address, or device identifiers. For Google's handling of Gemini API data, please see the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Additional Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+        <li><strong>Firebase Cloud Functions and Google Gemini API ("Tonight's Words" generation)</strong>: When you use the AI feature, the diary text, mood tag, moon age, moon phase, and weather information you have entered are sent over HTTPS to our Firebase Callable Function and then to Google's Gemini API to generate a short message. The function does not persist the prompt or generated text. The generated text is returned to the App and stored only on your device.</li>
+        <li><strong>Firebase Authentication, App Check, and Cloud Firestore</strong>: Firebase creates an anonymous identifier to authenticate AI requests. App Check verifies that requests originate from the App. Cloud Firestore stores only the anonymous identifier, local date, time-zone offset, and daily request count for abuse prevention and usage limits.</li>
+        <li><strong>Firebase Analytics</strong>: We use Firebase Analytics to understand aggregate feature usage and improve the App. Firebase may process an app-instance identifier, device/app information, and in-app interaction events. Diary text and AI prompts are not included in Analytics events.</li>
       </ul>
-      <p>These transmissions occur only when the corresponding feature is in use. The data sent is not stored on our servers.</p>
+      <p>These transmissions occur only as needed for the corresponding feature. For Google's handling of these services, please see the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security documentation</a>, <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Additional Terms of Service</a>, and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
       <h2>3. Information Stored on Your Device</h2>
-      <p>The App does not store user data on any server outside your device by default. Diary text, mood tags, and settings are all stored in local storage on your device (Hive / SharedPreferences).</p>
+      <p>Diary text, mood tags, generated messages, and settings are stored in local storage on your device (Hive / SharedPreferences). Our backend does not store diary text, AI prompts, or generated messages. It stores only the anonymous identifier and daily request-limit data described above.</p>
       <p>If you back up your device (iCloud Backup, Google Drive Backup, etc.), the data may be backed up to the cloud per your OS backup settings. Such backups are managed by the OS provider (Apple / Google) and we do not have access to them.</p>
 
       <h2>4. Notifications</h2>
       <p>All notifications from the App (diary reminder, moon-viewing notification, etc.) are local notifications running on your device. We do not use any push notification servers and we cannot read the content or destination of these notifications.</p>
 
       <h2>5. Analytics and Advertising</h2>
-      <p>The App does not include any analytics SDK or advertising SDK that tracks user behavior. We also do not use any SDK for crash reporting or usage analytics.</p>
+      <p>The App uses Firebase Analytics as described above. It does not include an advertising SDK and does not use Firebase Crashlytics.</p>
 
       <h2>6. Payment Information</h2>
       <p>Premium purchases are processed through the Apple App Store or Google Play payment system. Payment details such as credit card numbers are managed by Apple / Google and we do not have access to them. We use only the receipt information issued by the store to confirm the validity of a purchase.</p>
@@ -150,7 +153,7 @@
       <p>You can perform the following actions at any time:</p>
       <ul>
         <li>Export or import your diary data from the Settings screen</li>
-        <li>Delete all diary data, settings, and caches stored on the device using "Delete all data" in Settings</li>
+        <li>Delete all diary data, settings, and caches stored on the device, plus the server-side AI request counter and anonymous Firebase user, using "Delete all data" in Settings</li>
         <li>Revoke location and notification permissions in your device's OS settings</li>
       </ul>
 
@@ -166,7 +169,7 @@
 
     <section id="ja" class="divider">
       <h1>プライバシーポリシー</h1>
-      <p class="meta">最終更新日: 2026年8月9日</p>
+      <p class="meta">最終更新日: 2026年9月11日</p>
 
       <div class="lead">
         <p>本ポリシーは、PPOONN STUDIO（以下「当方」）が提供するモバイルアプリケーション「Moonjot（ムーンジョット）」（以下「本アプリ」）における、ユーザーの情報の取り扱いについて定めるものです。</p>
@@ -178,25 +181,28 @@
         <li><strong>位置情報</strong>：現在地の月の出入り時刻と天気を取得するために使用します。OS の位置情報許可がある場合のみ取得し、許可されていない場合や手動で都市を選択している場合は、ユーザーが選んだ都市の座標を使用します。</li>
         <li><strong>日記本文・気分タグ・月齢・天気情報</strong>：ユーザーが入力した日記本文、選択した気分タグ、その日時点の月齢・月相・天気情報。これらは原則として端末内のローカルストレージにのみ保存されます。</li>
         <li><strong>アプリの設定情報</strong>：通知のオン／オフ、リマインダー時刻、表示設定、選択言語など。端末内に保存されます。</li>
+        <li><strong>Firebase の匿名識別子・AI利用回数</strong>：不正利用防止と利用回数制限のため、無作為に生成された匿名識別子と1日ごとのAI利用回数を使用します。この目的で氏名・メールアドレス・パスワードを取得することはありません。</li>
       </ul>
 
       <h2>2. 第三者サービスへの送信</h2>
       <p>本アプリは、以下の機能を提供するために、必要最小限の情報を外部サービスに送信します。</p>
       <ul>
         <li><strong>OpenWeatherMap（天気情報の取得）</strong>：緯度経度を OpenWeatherMap API に送信し、現在地の天気情報を取得します。日記本文や個人を特定する情報は送信しません。</li>
-        <li><strong>Google Gemini API（「今夜の言葉」生成）</strong>：ユーザーが入力した日記本文、気分タグ、月齢・月相、天気情報を Google の Gemini API に送信し、AI が生成する短い言葉を取得します。送信内容にはユーザーを直接特定する情報（氏名・メールアドレス・端末識別子等）は含まれません。Google による Gemini API の取り扱いについては、<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 追加利用規約</a>および <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>をご確認ください。</li>
+        <li><strong>Firebase Cloud Functions・Google Gemini API（「今夜の言葉」生成）</strong>：AI機能の利用時に、日記本文、気分タグ、月齢・月相、天気情報をHTTPSで当方の Firebase Callable Function へ送り、そこから Google Gemini API へ送信して短い言葉を生成します。Function はプロンプトや生成文を保存しません。生成文は本アプリへ返され、端末内にのみ保存されます。</li>
+        <li><strong>Firebase Authentication・App Check・Cloud Firestore</strong>：AIリクエストの認証に匿名識別子を使用し、App Check で本アプリからのリクエストであることを検証します。Cloud Firestore には、不正利用防止と回数制限のため、匿名識別子、端末の現地日付、タイムゾーンオフセット、1日ごとの利用回数のみを保存します。</li>
+        <li><strong>Firebase Analytics</strong>：機能の利用状況を集計し、本アプリを改善するために使用します。Firebase はアプリインスタンス識別子、端末・アプリ情報、アプリ内操作イベントを処理する場合があります。日記本文やAIプロンプトをAnalyticsイベントへ含めることはありません。</li>
       </ul>
-      <p>これらの送信は、当該機能を利用するときにのみ行われます。送信されたデータは当方のサーバーには保存されません。</p>
+      <p>これらの送信は、各機能の提供に必要な場合にのみ行われます。Googleによる各サービスの取り扱いについては、<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a>、<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 追加利用規約</a>および <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>をご確認ください。</p>
 
       <h2>3. 端末内に保存される情報</h2>
-      <p>本アプリは原則として、ユーザーのデータを端末外のサーバーに保存しません。日記本文・気分タグ・設定情報は、すべて端末内のローカルストレージ（Hive / SharedPreferences）に保存されます。</p>
+      <p>日記本文・気分タグ・生成文・設定情報は、端末内のローカルストレージ（Hive / SharedPreferences）に保存されます。当方のバックエンドは日記本文、AIプロンプト、生成文を保存せず、上記の匿名識別子と1日ごとの利用回数データのみを保存します。</p>
       <p>端末をバックアップ（iCloud バックアップ・Google ドライブのバックアップ等）した場合、OS のバックアップ機能に従ってクラウドにバックアップされる場合があります。これらは OS 提供元（Apple / Google）が管理するものであり、当方はアクセスできません。</p>
 
       <h2>4. 通知</h2>
       <p>本アプリの通知（日記リマインダー、観月通知等）は、すべて端末上で動作するローカル通知です。プッシュ通知サーバーは利用しておらず、当方が通知の内容や送信先を取得することはありません。</p>
 
       <h2>5. アナリティクス・広告</h2>
-      <p>本アプリは、ユーザーの行動を追跡するアナリティクス SDK や広告 SDK を組み込んでいません。クラッシュレポートや使用状況の解析のための SDK も使用していません。</p>
+      <p>本アプリは上記のとおり Firebase Analytics を使用します。広告SDKおよび Firebase Crashlytics は使用していません。</p>
 
       <h2>6. 課金情報</h2>
       <p>プレミアム機能の購入は、Apple App Store または Google Play ストアの決済システムを通じて行われます。クレジットカード番号などの決済情報は Apple / Google が管理し、当方が取得することはありません。購入の有効性確認には、ストアが発行するレシート情報のみを利用します。</p>
@@ -208,7 +214,7 @@
       <p>ユーザーは以下の操作をいつでも行うことができます。</p>
       <ul>
         <li>設定画面から、日記データをエクスポート／インポートする</li>
-        <li>設定画面の「全データを削除」から、端末内のすべての日記・設定・キャッシュを完全に削除する</li>
+        <li>設定画面の「全データを削除」から、端末内の日記・設定・キャッシュに加え、サーバー側のAI利用回数と匿名Firebaseユーザーを削除する</li>
         <li>OS の設定から、位置情報・通知の権限を取り消す</li>
       </ul>
 
